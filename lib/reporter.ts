@@ -223,7 +223,9 @@ class ReportPortalReporter extends Reporter {
     if (this.reporterOptions.setRetryTrue) {
       testStartObj.retry = true;
     }
-    addBrowserParam(this.sanitizedCapabilities, testStartObj);
+    if (this.reporterOptions.addBrowserParam) {
+      addBrowserParam(this.sanitizedCapabilities, testStartObj);
+    }
 
     const {tempId, promise} = this.client.startTestItem(
       testStartObj,

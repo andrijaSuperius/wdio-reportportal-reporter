@@ -32,4 +32,5 @@ export default class ReporterOptions {
   public autoAttachCucumberFeatureToScenario = false;
   public sanitizeErrorMessages = true;
   public reportPortalClientConfig = {mode: MODE.DEFAULT, attributes: [Attribute], description: ""};
+  public addBrowserParam = true;
 }
